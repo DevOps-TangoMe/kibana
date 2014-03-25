@@ -41,6 +41,11 @@ Documentation, panel options and tutorials can be found at
 1. Elasticsearch connection URL can be configured in kibana/dist/config.js.
 
 ### FAQ
-__Q__: If _unique query took a long time I see that kibana finishes request before server responses.
-__A__: If you are using LB and/or Proxy to connect to elasticsearch nodes, than you need to make sure that LB and/or Proxy timeouts are configured properly and are more than expected _unique query execution time.
+
+__Q__ : If _unique query took a long time I see that kibana 
+finishes request before server responses. Why is that?
+
+__A__ : If you are using LB and/or Proxy to connect 
+to elasticsearch nodes, than you need to make sure that LB and/or Proxy timeouts 
+are configured properly and are more than expected _unique query execution time.
 

@@ -68,6 +68,7 @@ function (Settings) {
       'bettermap',
       'query',
       'terms',
+      'uniqueTerms',
       'stats',
       'sparklines'
     ]

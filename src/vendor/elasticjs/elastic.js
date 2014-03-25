@@ -20427,6 +20427,24 @@
       },
 
       /**
+       Executes the search.
+
+       @member ejs.Request
+       @param {Function} successcb A callback function that handles the search response.
+       @param {Function} errorcb A callback function that handles errors.
+       @returns {Object} Returns a client specific object.
+       */
+      doUnique: function (successcb, errorcb) {
+        var queryData = JSON.stringify(query);
+
+        // make sure the user has set a client
+        if (ejs.client == null) {
+          throw new Error("No Client Set");
+        }
+        return ejs.client.post(getRestPath('_unique'), queryData, successcb, errorcb);
+      },
+
+      /**
             Executes the search request as configured but only returns back
             the shards and nodes that the search is going to execute on.  This
             is a cluster admin method.

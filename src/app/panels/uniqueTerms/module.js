@@ -137,7 +137,7 @@ function (angular, app, _, $, kbn) {
         .facetFilter($scope.ejs.QueryFilter(
           $scope.ejs.FilteredQuery(
             boolQuery,
-            filterSrv.getBoolFilter(filterSrv.ids)
+            filterSrv.getBoolFilter(filterSrv.ids())
           )))).size(0);
 
       request = request.timeout("10m");
